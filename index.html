@@ -5,6 +5,9 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./lib/index.js"></script>
+    <script src="./lib/cart.js"></script>
+    <script src="./lib/item.js"></script>
+    <script src="./lib/list.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
   </head>
   <body>
@@ -12,9 +15,20 @@
 
     <h4>Shopping list:</h4>
 
-    <input type="text" id="name" placeholder="Item name"></input>
+    <!-- <input type="text" id="name" placeholder="Item name"></input>
     <input type="text" id="price" placeholder="Item price"></input>
-    <button class="button">Add item to shopping list</button>
+    <button class="button">Add item to shopping list</button> -->
+
+
+    <!-- These two "forms" above and below are equivalent, with an extra way of
+    adding a submit button below (commented out) -->
+    <form>
+      <label form="item" name="item">
+        <input type="text" id="name" placeholder="Item name">
+        <input type="text" id="price" placeholder="Item price">
+      <button class="button">Add item to shopping list</button>
+      <!-- <input type="submit" class="button" value="submit"> -->
+    </form>
 
     <ul class="list"></ul>
     <div class="border"></div>
@@ -24,7 +38,7 @@
 <!--- Cart --->
 
     <h4>My Cart:</h4>
-
+    <ul class="cart"></ul>
     <div class="border"></div>
 
   </body>
